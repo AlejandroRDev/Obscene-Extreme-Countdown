@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import './Countdown.css';
+
 
 const Countdown = () => {
   const [time, setTime] = useState("");
@@ -17,7 +19,7 @@ const Countdown = () => {
       );
       let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      setTime(days + "d " + hours + "h " + minutes + "m " + seconds + "s ");
+      setTime(days + " - " + hours + " - " + minutes + " - " + seconds);
       if (distance < 0) {
         clearInterval(x);
         setTime("COUNTDOWN FINISHED");
@@ -27,6 +29,13 @@ const Countdown = () => {
   }, []);
   return (
     <div className="countdown">
+    <h2 className="countdown-title">TIME REMAINING TO UNLEASH HELL</h2>
+    <ul className="countdown-list">
+        <li>Days</li>
+        <li>Hours</li>
+        <li>Min</li>
+        <li>Sec</li>
+    </ul>
       <h2>{time}</h2>
     </div>
   );

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import './Stopwatch.css';
 
 const Stopwatch = () => {
   const [time, setTime] = useState(0);
@@ -23,14 +24,14 @@ const Stopwatch = () => {
       <span>{("0" + ((time / 10) % 100)).slice(-2)}</span>
       <div id="buttons">
         {!timerOn && time === 0 && (
-          <button onClick={() => setTimerOn(true)}>Start</button>
+          <button onClick={() => setTimerOn(true)} className="myButton">Start</button>
         )}
-        {timerOn && <button onClick={() => setTimerOn(false)}>Stop</button>}
+        {timerOn && <button onClick={() => setTimerOn(false)} className="myButton">Stop</button>}
         {!timerOn && time > 0 && (
-          <button onClick={() => setTimerOn(true)}>Resume</button>
+          <button onClick={() => setTimerOn(true)} className="myButton">Resume</button>
         )}
         {!timerOn && time > 0 && (
-          <button onClick={() => setTime(0)}>Restart</button>
+          <button onClick={() => setTime(0)} className="myButton">Restart</button>
         )}
       </div>
     </div>
