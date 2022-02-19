@@ -3,11 +3,13 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+    background-color: black;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-   background-image: url('./assets//images/background-obscene.jpg');
+   background-image: url('https://eshop.obscene.cz/img/OBSCENE-EXTREME-2022-PO1067-7041733.jpg');
+   background-position: center;
    background-repeat: no-repeat;
-   background-size: cover;
+   background-size: fill;
 }
 
 code {
